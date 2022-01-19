@@ -3,13 +3,17 @@ import Square from './Square';
 
 function Board() {
     const [square, setSquare] = useState(Array(9).fill(null))
+    const [X, setX] = useState(true)
 
     const renderSquare = (i) => {
         return <Square value={square[i]} onClick={() => handleClick(i)} />
     }
 
     const handleClick = (i) => {
-        console.log(i)
+        const squares = square.slice()
+        squares[i] = X ? 'X' : 'O'
+        setSquare(squares)
+        setX(!X)
     }
 
     return (
