@@ -13,7 +13,7 @@ function Board() {
         const squares = square.slice()
 
         if(squares[i] === null) {
-            squares[i] = X ? 'X' : 'O'
+            squares[i] = X ? '🌈' : '☠️'
             setSquare(squares)
             setX(!X)
         } else {
@@ -47,9 +47,9 @@ function Board() {
     const winner = calculateWinner(square)
     let status
     if(winner) {
-        status = `Winner: ${winner}`
+        status = `${winner} WINS!`
     } else {
-        status = 'Player turn: ' + (X ? 'X' : 'O')
+        status = 'Player turn: ' + (X ? '🌈' : '☠️')
     }
     
     return (
@@ -71,9 +71,9 @@ function Board() {
                 {renderSquare(7)}
                 {renderSquare(8)}
             </div>
-
-            {status}
-            
+            <div style={{fontSize: 100, marginTop: 50}}>
+                {status}
+            </div>
         </div>
     )
 }
