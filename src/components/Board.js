@@ -13,7 +13,7 @@ function Board() {
         const squares = square.slice()
 
         if(squares[i] === null) {
-            squares[i] = X ? '🌈' : '☠️'
+            squares[i] = X ? '🤪' : '😂'
             setSquare(squares)
             setX(!X)
         } else {
@@ -49,7 +49,7 @@ function Board() {
     if(winner) {
         status = `${winner} WINS!`
     } else {
-        status = 'Player turn: ' + (X ? '🌈' : '☠️')
+        status = 'Player turn: ' + (X ? '🤪' : '😂')
     }
     
     return (
