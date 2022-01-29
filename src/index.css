@@ -28,6 +28,11 @@ code {
   height:200px;
   width:200px;
   font-size: 50px;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  background-color: gray;
 }
 
 .App {
